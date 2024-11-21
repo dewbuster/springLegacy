@@ -1,0 +1,14 @@
+[수업내용정리]
+
+1. webapp
+	ㄴ cmr 폴더
+		ㄴ upload 파일 추가		요청URL 사용
+
+2. views
+	ㄴ cmr 폴더
+		ㄴ upload.jsp 파일 추가
+		
+3. HomeController.java 복사 붙이기
+	ㄴ CmrUploadController.java
+
+4. servlet-context.xml

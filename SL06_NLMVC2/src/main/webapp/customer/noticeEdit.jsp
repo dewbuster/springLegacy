@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -84,7 +85,7 @@
 								제목
 							</dt>
 							<dd class="article-detail-data">
-								&nbsp;<input name="title" value="제 12회 창업스쿨 " />
+								&nbsp;<input name="title" value="${notice.title}" />
 							</dd>
 						</dl>	
 						<dl class="article-detail-row half-row">
@@ -92,7 +93,7 @@
 								작성자
 							</dt>
 							<dd class="article-detail-data half-data" >
-								뉴렉
+								${notice.writer}
 							</dd>
 						</dl>
 						<dl class="article-detail-row half-row">
@@ -100,7 +101,7 @@
 								조회수
 							</dt>
 							<dd class="article-detail-data half-data">
-								1235
+								${notice.hit}
 							</dd>
 						</dl>
 						<dl class="article-detail-row">
@@ -113,16 +114,18 @@
 						</dl>
 
 						<div class="article-content" >
-							<textarea id="txtContent" class="txtContent" name="content"><img src="http://sstatic.naver.net/keypage/outside/info/2011031017145546407.jpg" /><br />동해물과 백두산이 마르고 닳도록
-							</textarea>
-						</div>						
+							<textarea id="txtContent" class="txtContent" name="content">${notice.content}</textarea>
+						</div>
 					</div>
 					<p class="article-comment margin-small">
-						<a class="btn-save button" href="noticeEditProc.jsp">수정</a>
-						<a class="btn-cancel button" href="noticeDetail.jsp">취소</a>						
-					</p>		
-					</form>					
-				</div>				
+						<!-- <a class="btn-save button" href="noticeEditProc.jsp">수정</a> -->
+						<input type="submit" value="수정" class="btn-save button" />
+						<!-- 현재페이지 번호, 검색조건, 검색어 등등 ..유지 -->
+						<a class="btn-cancel button" href="noticeDetail.htm">취소</a>
+					</p>
+					<input type="hidden" name="${ _csrf.parameterName }" value="${ _csrf.token }">
+					</form>
+				</div>
 				<div id="navi">
 					<h2>고객센터</h2>
 				    <h3 class="hidden">고객센터메뉴</h3>
