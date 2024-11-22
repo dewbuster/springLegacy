@@ -1,0 +1,27 @@
+[수업내용정리]
+
+p 438 업로드
+
+1. pom.xml
+	ㄴ commons-fileupload 확인
+	
+	<dependency>
+          <groupId>commons-fileupload</groupId>
+          <artifactId>commons-fileupload</artifactId>
+          <version>1.3</version>
+      </dependency>
+	
+2. servlet-context.xml
+	multipartResolver 객체 등록
+	멀티파일(데이터, 파일) -> 서버 스프링 변환
+	
+3. noticeReg.jsp
+
+4. 업로드된 파일을 사용하는 방법 (컨트롤러 메서드)
+	1) MultipartFile 인터페이스 사용
+	2) @RequestParam 어노테이션 사용
+	3) MultipartHttpServletRequest 사용
+	4) 커멘드 객체를 사용 ******
+	
+5. 공지사항 수정
+6. 공지사항 삭제

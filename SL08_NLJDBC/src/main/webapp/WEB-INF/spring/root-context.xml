@@ -40,5 +40,11 @@
    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
      <property name="dataSource"  ref="dataSource" />
    </bean>
-      
+   
+   <!-- p488 -->
+   <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" >
+     <property name="dataSource" ref="dataSource"></property>
+   </bean>
+   
+   
 </beans>
