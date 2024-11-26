@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-// 공지사항 
+// 공지사항
 @Controller
 @RequestMapping("/joinus/*")
 public class JoinController {
@@ -38,9 +38,3 @@ public class JoinController {
 	}
 	
 } // class
-
-
-
-
-
-

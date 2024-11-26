@@ -1,0 +1,29 @@
+package org.doit.ik.mapper;
+
+
+import java.sql.SQLException;
+import java.util.List;
+import org.doit.ik.domain.NoticeVO;
+
+
+public interface NoticeMapper {
+	
+	public int getCount(String field, String query) throws ClassNotFoundException, SQLException;
+	
+	public List<NoticeVO> getNotices(int page, String field, String query) throws ClassNotFoundException, SQLException;
+	
+	public int delete(String seq) throws ClassNotFoundException, SQLException;
+	
+	public int update(NoticeVO notice) throws ClassNotFoundException, SQLException;
+	
+	public NoticeVO getNotice(String seq) throws ClassNotFoundException, SQLException;
+
+	public int insert(NoticeVO notice) throws ClassNotFoundException, SQLException;
+	
+	// public void insertAndPointUpOfMember(NoticeVO notice, String id) throws ClassNotFoundException, SQLException;
+	
+	public void hitUp(String seq) throws ClassNotFoundException, SQLException;
+	
+	public int getHit(String seq) throws ClassNotFoundException, SQLException;
+	
+}
